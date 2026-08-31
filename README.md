@@ -16,6 +16,7 @@
 
 </div>
 
+---
 
 ## Executive Summary
 
@@ -37,8 +38,9 @@ The objective is to support commercial decisions around:
 
 The analytical workflow moves beyond descriptive reporting by combining **statistical inference, predictive modelling, explainability, and business interpretation**.
 
+---
 
-# Key Commercial Findings
+#  Key Commercial Findings
 
 | Indicator | Result |
 |---|---:|
@@ -54,8 +56,9 @@ The analytical workflow moves beyond descriptive reporting by combining **statis
 
 > **Commercial takeaway:** demand appears relatively price inelastic within the observed market, while seller positioning, product value, and broader marketplace characteristics contribute materially to sales performance.
 
+---
 
-# Commercial Questions
+#  Commercial Questions
 
 The analysis addresses six practical business questions:
 
@@ -66,8 +69,9 @@ The analysis addresses six practical business questions:
 5. **Which price points may offer stronger revenue potential?**
 6. **Can products and sellers be grouped into commercially meaningful market segments?**
 
+---
 
-# Analytical Framework
+#  Analytical Framework
 
 ```text
 Raw E-Commerce Data
@@ -112,6 +116,7 @@ Revenue Optimisation
 Commercial Pricing Intelligence
 ```
 
+---
 
 #  Pricing & Demand Elasticity
 
@@ -142,8 +147,9 @@ Pricing decisions should not be based on elasticity alone. Product quality, sell
 
 The relatively low elasticity nevertheless suggests that some sellers may have greater pricing flexibility than would be expected in a highly price-sensitive marketplace.
 
+---
 
-# Seller & Product Effects
+#  Seller & Product Effects
 
 A richer econometric specification was used to evaluate sales after accounting for seller and product characteristics.
 
@@ -166,6 +172,7 @@ Seller characteristics, perceived value, ratings, and product positioning contri
 
 This matters commercially because competing purely on price may overlook other drivers capable of strengthening sales.
 
+---
 
 #  Promotional Effectiveness
 
@@ -185,6 +192,7 @@ This suggests that:
 
 For commercial teams, the result supports a **selective promotional strategy** instead of assuming that deeper markdowns will necessarily generate proportionally stronger sales.
 
+---
 
 #  Machine Learning Demand Model
 
@@ -208,7 +216,7 @@ Model Evaluation
 Demand Predictions
         ↓
 SHAP Explainability
-
+```
 
 ### Reported Performance
 
@@ -221,8 +229,9 @@ The reported results indicate a strong fit within the current modelling setup.
 
 However, high predictive performance is treated cautiously and should be validated against potential leakage, correlated aggregate features, and performance on fully unseen marketplace data before production deployment.
 
+---
 
-#  Explainable Machine Learning
+# Explainable Machine Learning
 
 High predictive accuracy is only commercially useful when stakeholders can understand **what is driving predictions**.
 
@@ -242,6 +251,7 @@ It allows decision-makers to investigate:
 - Which product characteristics create stronger sales signals
 - Where pricing decisions should be considered alongside non-price factors
 
+---
 
 #  Market Segmentation
 
@@ -261,6 +271,8 @@ Potential applications include:
 - Targeted promotions
 - Product assortment planning
 - Competitive positioning
+
+---
 
 # Revenue Optimisation
 
@@ -293,8 +305,9 @@ Actual pricing decisions should also consider:
 - Product quality
 - Marketplace fees and margins
 
+---
 
-# Decision Implications
+#  Decision Implications
 
 ### Pricing
 
@@ -320,8 +333,9 @@ Predictive modelling can identify complex demand patterns that are difficult to 
 
 Combining estimated demand with alternative price scenarios creates a foundation for evidence-based pricing decisions.
 
+---
 
-#  Model Risk & Validation
+# Model Risk & Validation
 
 Commercial analytics should communicate uncertainty as clearly as opportunity.
 
@@ -347,8 +361,9 @@ Alternative econometric specifications
 Sensitivity analysis
 ```
 
+---
 
-# Technology Stack
+#  Technology Stack
 
 | Area | Technology |
 |---|---|
@@ -363,6 +378,9 @@ Sensitivity analysis
 | Development | **Jupyter Notebook** |
 | Version Control | **Git & GitHub** |
 
+---
+
+
 #  Explore the Analysis
 
 The complete notebook contains the underlying analytical workflow, including data preparation, econometric modelling, machine learning, SHAP analysis, segmentation, and revenue optimisation.
@@ -371,7 +389,7 @@ The complete notebook contains the underlying analytical workflow, including dat
 
 ---
 
-# Running the Analysis
+#  Running the Analysis
 
 Clone the repository:
 
@@ -405,7 +423,7 @@ notebooks/pakistan-s-e-commerce-microphone-market.ipynb
 
 ---
 
-# Commercial Extensions
+#  Commercial Extensions
 
 The analytical framework can be extended into a more complete marketplace intelligence platform through:
 
@@ -423,12 +441,13 @@ The analytical framework can be extended into a more complete marketplace intell
 - Production API deployment
 - Automated marketplace data pipelines
 
+---
 
 # Capabilities Demonstrated
 
 `Commercial Analytics` · `Pricing Analytics` · `Econometrics` · `Machine Learning` · `XGBoost` · `Explainable AI` · `SHAP` · `Market Segmentation` · `Revenue Optimisation` · `Python` · `Statistical Modelling` · `Data Visualisation` · `Business Intelligence`
 
-
+---
 
 <div align="center">
 
