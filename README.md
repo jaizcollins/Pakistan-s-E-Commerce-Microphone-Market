@@ -1,131 +1,73 @@
-# 🎙️ Pakistan's E-Commerce Microphone Market: Pricing Intelligence & Demand Forecasting
+<div align="center">
 
-## 📌 Project Overview
+# 🎙️ Pakistan E-Commerce Microphone Market Intelligence
 
-Pakistan's online microphone market spans large e-commerce platforms selling consumer-grade products and specialised retailers serving content creators, streamers, musicians, podcasters, and professional studios.
+### Pricing Strategy · Demand Modelling · Explainable AI · Market Segmentation
 
-This project applies **data analytics, econometrics, machine learning, and time-series forecasting** to examine how pricing, discounts, seller characteristics, and other product attributes influence microphone sales in Pakistan's e-commerce market.
+**A commercial analytics framework for understanding price sensitivity, demand drivers, seller competitiveness, promotional effectiveness, and revenue opportunities in Pakistan's online microphone market.**
 
-Rather than stopping at exploratory analysis, the project develops a **pricing intelligence framework** designed to answer practical commercial questions around demand, competition, pricing, and future sales.
+<br>
+
+![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-Analytics-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![XGBoost](https://img.shields.io/badge/XGBoost-Machine%20Learning-FF6600?style=for-the-badge)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Modeling-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
+![SHAP](https://img.shields.io/badge/SHAP-Explainable%20AI-7B61FF?style=for-the-badge)
+
+</div>
 
 
+## Executive Summary
 
-## 🎯 Business Questions
+Pakistan's online microphone market serves a diverse customer base ranging from casual consumers to content creators, streamers, podcasters, musicians, and professional audio users.
 
-The analysis focuses on six major questions:
+This analysis converts marketplace data into **decision-oriented pricing and demand intelligence**.
+
+Using econometrics, machine learning, explainable AI, and market segmentation, the analysis evaluates how pricing, product characteristics, seller positioning, ratings, discounts, and other marketplace variables relate to sales performance.
+
+The objective is to support commercial decisions around:
+
+- Pricing strategy
+- Revenue optimisation
+- Seller benchmarking
+- Promotional effectiveness
+- Product positioning
+- Demand estimation
+- Market segmentation
+
+The analytical workflow moves beyond descriptive reporting by combining **statistical inference, predictive modelling, explainability, and business interpretation**.
+
+
+# Key Commercial Findings
+
+| Indicator | Result |
+|---|---:|
+| Marketplace records analysed | **1,360** |
+| Total units sold | **83,832** |
+| Estimated marketplace revenue | **PKR 162.0M** |
+| Average product price | **PKR 3,680.70** |
+| Estimated price elasticity | **-0.34** |
+| Seller/product-effects model R² | **0.689** |
+| XGBoost reported R² | **0.996** |
+| XGBoost reported MAE | **2.24 units** |
+| Estimated revenue-maximising price | **PKR 4,784.91** |
+
+> **Commercial takeaway:** demand appears relatively price inelastic within the observed market, while seller positioning, product value, and broader marketplace characteristics contribute materially to sales performance.
+
+
+# Commercial Questions
+
+The analysis addresses six practical business questions:
 
 1. **How price-sensitive is demand?**
-2. **What factors drive microphone sales?**
-3. **Are discounts genuinely effective at increasing demand?**
-4. **Which sellers dominate the market?**
-5. **What prices are likely to maximise revenue?**
-6. **Can future demand be accurately forecast?**
+2. **Which marketplace variables are most strongly associated with sales?**
+3. **Do larger discounts materially improve demand?**
+4. **How important are seller and product-positioning effects?**
+5. **Which price points may offer stronger revenue potential?**
+6. **Can products and sellers be grouped into commercially meaningful market segments?**
 
----
 
-## 🧠 Analytical Framework
-
-The project combines three complementary analytical approaches.
-
-### 1. Econometric Analysis
-
-Econometric modelling is used to investigate the relationship between **price and demand**.
-
-Price elasticity provides a way of estimating how strongly sales respond when product prices change.
-
-This helps distinguish between:
-
-* Price-sensitive products
-* Relatively price-insensitive products
-* Products where price increases may significantly reduce demand
-* Products where sellers may have greater pricing flexibility
-
-The analysis provides the foundation for subsequent pricing optimisation.
-
----
-
-### 2. Machine Learning
-
-An **XGBoost regression model** is used to identify nonlinear relationships between product characteristics and sales performance.
-
-The modelling pipeline includes:
-
-* Feature engineering
-* Data preprocessing
-* Train-test splitting
-* XGBoost regression
-* Hyperparameter optimisation
-* GridSearch cross-validation
-* Model evaluation
-* Feature-importance analysis
-
-The objective is not simply to predict sales but also to determine **which marketplace variables contribute most strongly to demand**.
-
----
-
-### 3. Time-Series Forecasting
-
-**Prophet** is used to model historical demand patterns and estimate future market behaviour.
-
-The forecasting component helps identify:
-
-* Demand trends
-* Changes over time
-* Potential seasonal patterns
-* Expected future demand
-* Forecast uncertainty
-
-These forecasts can support inventory planning, purchasing decisions, promotional planning, and pricing strategy.
-
----
-
-## 💰 Price Elasticity & Revenue Optimisation
-
-One of the central objectives of the project is moving beyond prediction toward **commercial decision-making**.
-
-Estimated demand relationships are used to examine how different prices could affect:
-
-```text
-Revenue = Price × Expected Demand
-```
-
-By estimating expected demand across different price points, the analysis can identify prices associated with higher predicted revenue.
-
-This transforms the project from descriptive marketplace analysis into a **data-driven pricing intelligence system**.
-
----
-
-## 📊 Key Areas of Analysis
-
-The notebook explores several dimensions of Pakistan's microphone marketplace, including:
-
-### Market Structure
-
-Analysis of the distribution of products, sellers, prices, ratings, discounts, and sales.
-
-### Seller Competition
-
-Comparison of sellers to determine which businesses or marketplace participants command the strongest positions.
-
-### Pricing
-
-Investigation of how product prices vary across the marketplace and how those differences relate to sales.
-
-### Discount Effectiveness
-
-Assessment of whether larger advertised discounts are actually associated with stronger demand.
-
-### Demand Drivers
-
-Machine-learning feature importance is used to identify the variables most strongly associated with product sales.
-
-### Demand Forecasting
-
-Historical market behaviour is modelled to estimate future demand patterns.
-
----
-
-## 🔄 Project Workflow
+# Analytical Framework
 
 ```text
 Raw E-Commerce Data
@@ -134,227 +76,366 @@ Raw E-Commerce Data
 Data Cleaning & Validation
         │
         ▼
-Exploratory Data Analysis
-        │
-        ├──────────────► Seller Analysis
-        │
-        ├──────────────► Discount Analysis
-        │
-        └──────────────► Market Structure
+Market & Seller Analysis
         │
         ▼
 Feature Engineering
         │
-        ▼
-Price Elasticity Modelling
+        ├── Pricing Variables
+        ├── Product Characteristics
+        ├── Seller Variables
+        └── Value / Rating Metrics
         │
         ▼
-XGBoost Demand Model
+Econometric Analysis
+        │
+        ├── Price Elasticity
+        ├── Seller Effects
+        └── Discount Analysis
         │
         ▼
-GridSearch Hyperparameter Tuning
+XGBoost Demand Modelling
         │
         ▼
-Feature Importance
+Hyperparameter Optimisation
+        │
+        ▼
+SHAP Explainability
+        │
+        ▼
+KMeans Market Segmentation
         │
         ▼
 Revenue Optimisation
         │
         ▼
-Prophet Demand Forecasting
-        │
-        ▼
-Pricing Intelligence & Business Insights
+Commercial Pricing Intelligence
 ```
 
----
 
-## 🛠️ Technologies Used
+#  Pricing & Demand Elasticity
 
-| Category                | Tools                      |
-| ----------------------- | -------------------------- |
-| Programming             | Python                     |
-| Data Manipulation       | Pandas, NumPy              |
-| Visualisation           | Matplotlib, Seaborn        |
-| Econometrics            | Statsmodels                |
-| Machine Learning        | XGBoost                    |
-| Model Selection         | Scikit-learn, GridSearchCV |
-| Forecasting             | Prophet                    |
-| Development Environment | Jupyter Notebook / Kaggle  |
-| Version Control         | Git & GitHub               |
+A log-log demand model was used to estimate how sales respond to changes in price.
 
----
+### Estimated Price Elasticity
 
-## 📈 Machine Learning Pipeline
+# **-0.34**
 
-The machine-learning component follows a structured modelling workflow:
+| Econometric Metric | Result |
+|---|---:|
+| Price elasticity coefficient | **-0.3447** |
+| Statistical significance | **p < 0.001** |
+| 95% confidence interval | **[-0.430, -0.259]** |
+| Observations | **1,360** |
 
-```python
-Data
-  ↓
-Cleaning
-  ↓
+The estimated elasticity indicates **relatively inelastic demand** within the observed marketplace.
+
+A 1% increase in price is associated with an estimated **0.34% decrease in quantity sold**, holding the interpretation of the fitted model constant.
+
+From a commercial perspective, this suggests that demand does not decline proportionally with price increases across the analysed market.
+
+![Price Demand Curve](images/price_demand_curve.png)
+
+### Business Interpretation
+
+Pricing decisions should not be based on elasticity alone. Product quality, seller position, ratings, competition, and value perception also influence demand.
+
+The relatively low elasticity nevertheless suggests that some sellers may have greater pricing flexibility than would be expected in a highly price-sensitive marketplace.
+
+
+# Seller & Product Effects
+
+A richer econometric specification was used to evaluate sales after accounting for seller and product characteristics.
+
+### Model Performance
+
+| Metric | Result |
+|---|---:|
+| R² | **0.689** |
+| Adjusted R² | **0.687** |
+| Overall significance | **p < 0.001** |
+| Observations | **1,360** |
+
+The model explains a substantially larger proportion of sales variation than price alone.
+
+### Key Implication
+
+Demand appears to depend on more than price.
+
+Seller characteristics, perceived value, ratings, and product positioning contribute meaningfully to marketplace performance.
+
+This matters commercially because competing purely on price may overlook other drivers capable of strengthening sales.
+
+
+#  Promotional Effectiveness
+
+Discounting was tested as a potential driver of demand.
+
+The estimated discount effect was comparatively weak after other marketplace characteristics were considered.
+
+At the conventional 5% significance threshold, discount percentage was not statistically significant in the fitted seller-effects model.
+
+### Discount × Rating Interaction
+
+The interaction between discounting and product rating was also not statistically significant.
+
+This suggests that:
+
+> **Increasing the advertised discount does not automatically compensate for weaker product positioning or lower perceived quality.**
+
+For commercial teams, the result supports a **selective promotional strategy** instead of assuming that deeper markdowns will necessarily generate proportionally stronger sales.
+
+
+#  Machine Learning Demand Model
+
+An **XGBoost regression model** was developed to capture nonlinear relationships between marketplace characteristics and product sales.
+
+The modelling workflow included:
+
+```text
 Feature Engineering
-  ↓
-Train/Test Split
-  ↓
-Baseline Model
-  ↓
-XGBoost
-  ↓
+        ↓
+Train / Test Split
+        ↓
+Baseline XGBoost
+        ↓
 GridSearchCV
-  ↓
-Best Parameters
-  ↓
+        ↓
+Hyperparameter Selection
+        ↓
 Model Evaluation
-  ↓
-Feature Importance
-  ↓
+        ↓
 Demand Predictions
-```
+        ↓
+SHAP Explainability
 
-Hyperparameter tuning with **GridSearchCV** is used to systematically search for a stronger XGBoost configuration rather than relying entirely on default model parameters.
 
----
+### Reported Performance
 
-## 🔮 Forecasting Pipeline
+| Metric | Result |
+|---|---:|
+| R² | **0.996** |
+| MAE | **2.24 units** |
 
-The forecasting process can be summarised as:
+The reported results indicate a strong fit within the current modelling setup.
+
+However, high predictive performance is treated cautiously and should be validated against potential leakage, correlated aggregate features, and performance on fully unseen marketplace data before production deployment.
+
+
+#  Explainable Machine Learning
+
+High predictive accuracy is only commercially useful when stakeholders can understand **what is driving predictions**.
+
+SHAP analysis was therefore used to explain feature contributions within the XGBoost demand model.
+
+![SHAP Feature Importance](images/shap_feature_importance.png)
+
+### Why Explainability Matters
+
+SHAP helps translate the demand model from a black-box prediction system into a more interpretable commercial tool.
+
+It allows decision-makers to investigate:
+
+- Which attributes contribute most strongly to predicted demand
+- Whether price is the dominant driver
+- How seller-level variables affect predictions
+- Which product characteristics create stronger sales signals
+- Where pricing decisions should be considered alongside non-price factors
+
+
+#  Market Segmentation
+
+Not all marketplace products compete in the same way.
+
+KMeans clustering was used to identify groups of products with similar commercial characteristics, while Principal Component Analysis was used to visualise the resulting market structure.
+
+![Market Segments](images/market_segments.png)
+
+Segmentation provides a foundation for differentiated strategies rather than treating every microphone listing as part of one homogeneous market.
+
+Potential applications include:
+
+- Premium vs. value positioning
+- Seller benchmarking
+- Segment-specific pricing
+- Targeted promotions
+- Product assortment planning
+- Competitive positioning
+
+# Revenue Optimisation
+
+The analysis extends demand modelling into pricing decision support.
+
+Revenue is defined as:
 
 ```text
-Historical Demand
-       ↓
-Time-Series Preparation
-       ↓
-Prophet Model
-       ↓
-Trend Estimation
-       ↓
-Future Demand Forecast
-       ↓
-Confidence Intervals
-       ↓
-Business Planning
+Revenue = Price × Expected Demand
 ```
 
-The resulting forecasts extend the analysis from understanding the current market to anticipating future demand.
+Using the estimated demand relationship, expected revenue can be evaluated across alternative price points.
 
----
+### Estimated Revenue-Maximising Price
 
-## 💡 Business Applications
+# **PKR 4,784.91**
 
-The analytical framework developed in this project could support several e-commerce decisions.
+Compared with the observed average product price of approximately **PKR 3,680.70**, the model identifies a higher price point associated with stronger estimated revenue under the fitted demand relationship.
 
-**Retailers** can use demand estimates to determine whether changing prices is likely to increase or decrease revenue.
+This should be interpreted as a **model-based pricing signal**, not as a universal recommended price for every microphone.
 
-**Marketplace sellers** can compare their competitive positions against other sellers and identify factors associated with stronger sales performance.
+Actual pricing decisions should also consider:
 
-**Inventory managers** can use demand forecasts to improve purchasing and stock-planning decisions.
+- Product segment
+- Brand positioning
+- Seller reputation
+- Competitive prices
+- Inventory levels
+- Customer ratings
+- Product quality
+- Marketplace fees and margins
 
-**Marketing teams** can evaluate whether discounts are contributing meaningfully to demand instead of assuming that larger discounts automatically generate stronger sales.
 
-**Pricing teams** can combine demand prediction with price elasticity estimates to identify more commercially attractive price points.
+# Decision Implications
 
----
+### Pricing
 
-## ⭐ What Makes This Project Different?
+The estimated elasticity suggests that parts of the market may tolerate moderate price increases without proportional reductions in demand.
 
-Many e-commerce analyses stop after descriptive charts and summary statistics.
+### Promotions
 
-This project extends the analysis through four levels:
+Larger discounts are not automatically associated with stronger demand once other marketplace characteristics are considered.
+
+### Seller Strategy
+
+Marketplace position and product-level value signals appear important, suggesting sellers should compete on more than price alone.
+
+### Product Positioning
+
+Market segmentation can support differentiated pricing and assortment strategies across commercially distinct groups.
+
+### Machine Learning
+
+Predictive modelling can identify complex demand patterns that are difficult to capture with simple linear relationships.
+
+### Revenue Management
+
+Combining estimated demand with alternative price scenarios creates a foundation for evidence-based pricing decisions.
+
+
+#  Model Risk & Validation
+
+Commercial analytics should communicate uncertainty as clearly as opportunity.
+
+Several considerations remain important:
+
+- Econometric diagnostics indicate potential multicollinearity and scale sensitivity.
+- Individual regression coefficients should therefore be interpreted cautiously.
+- The very high XGBoost R² warrants additional validation for potential leakage or highly correlated aggregate predictors.
+- Elasticity estimates represent the observed marketplace and should not automatically be transferred to every product or seller.
+- Revenue optimisation assumes the estimated demand relationship remains stable across the evaluated price range.
+- Marketplace behaviour can change as competition, supply, consumer preferences, and macroeconomic conditions evolve.
+
+Further validation could include:
 
 ```text
-DESCRIPTIVE
-What is happening?
-        ↓
-DIAGNOSTIC
-Why is it happening?
-        ↓
-PREDICTIVE
-What is likely to happen?
-        ↓
-PRESCRIPTIVE
-What pricing decision should be made?
+Variance Inflation Factor analysis
+Feature leakage review
+Cross-validation
+Out-of-time validation
+Seller-level holdout testing
+Feature scaling
+Alternative econometric specifications
+Sensitivity analysis
 ```
 
-The combination of **econometrics + machine learning + forecasting + revenue optimisation** creates an end-to-end framework for e-commerce pricing intelligence.
+
+# Technology Stack
+
+| Area | Technology |
+|---|---|
+| Programming | **Python** |
+| Data Manipulation | **Pandas, NumPy** |
+| Visualisation | **Matplotlib, Seaborn** |
+| Econometrics | **Statsmodels** |
+| Machine Learning | **XGBoost** |
+| Model Selection | **Scikit-learn, GridSearchCV** |
+| Explainable AI | **SHAP** |
+| Segmentation | **KMeans, PCA** |
+| Development | **Jupyter Notebook** |
+| Version Control | **Git & GitHub** |
+
+#  Explore the Analysis
+
+The complete notebook contains the underlying analytical workflow, including data preparation, econometric modelling, machine learning, SHAP analysis, segmentation, and revenue optimisation.
+
+### ▶️ [View the Full Analysis Notebook](notebooks/pakistan-s-e-commerce-microphone-market.ipynb)
 
 ---
 
-## 📂 Repository Structure
+# Running the Analysis
 
-```text
-pakistan-ecommerce-microphone-market/
-│
-├── data/
-│   └── microphone_market_data.csv
-│
-├── notebooks/
-│   └── pakistan_microphone_market_analysis.ipynb
-│
-├── images/
-│   └── visualisations/
-│
-├── README.md
-│
-└── requirements.txt
-```
-
----
-
-## 🚀 How to Run the Project
-
-### 1. Clone the repository
+Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
+git clone https://github.com/jaizcollins/Pakistan-s-E-Commerce-Microphone-Market.git
 ```
 
-### 2. Navigate to the project
+Move into the repository:
 
 ```bash
-cd YOUR-REPOSITORY
+cd Pakistan-s-E-Commerce-Microphone-Market
 ```
 
-### 3. Install dependencies
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Launch Jupyter Notebook
+Launch Jupyter:
 
 ```bash
 jupyter notebook
 ```
 
-Then open the project notebook and run the cells sequentially.
+Then open:
+
+```text
+notebooks/pakistan-s-e-commerce-microphone-market.ipynb
+```
 
 ---
 
-## 📓 Kaggle Notebook
+# Commercial Extensions
 
-The complete interactive analysis is also available on Kaggle:
+The analytical framework can be extended into a more complete marketplace intelligence platform through:
 
-👉 **[View the Pakistan E-Commerce Microphone Market Analysis on Kaggle](https://www.kaggle.com/code/collinsjaiz/pakistan-s-e-commerce-microphone-market)**
-
----
-
-## 🔮 Future Improvements
-
-Possible extensions of the project include:
-
-* Product-level dynamic pricing
-* Seller-specific elasticity modelling
-* Brand-level demand forecasting
-* SHAP analysis for model explainability
-* Automated price recommendation systems
-* Competitor price monitoring
-* Customer review sentiment analysis
-* Real-time marketplace data pipelines
-* Interactive pricing dashboards
-* Deployment of the demand model through an API
-
----
+- Dynamic pricing recommendations
+- Seller-specific elasticity models
+- Brand-level pricing intelligence
+- Competitor price monitoring
+- Automated price alerts
+- Product-level demand prediction
+- SHAP-based decision dashboards
+- Margin-aware revenue optimisation
+- Review sentiment analysis
+- Inventory optimisation
+- Interactive Power BI or Tableau dashboards
+- Production API deployment
+- Automated marketplace data pipelines
 
 
+# Capabilities Demonstrated
+
+`Commercial Analytics` · `Pricing Analytics` · `Econometrics` · `Machine Learning` · `XGBoost` · `Explainable AI` · `SHAP` · `Market Segmentation` · `Revenue Optimisation` · `Python` · `Statistical Modelling` · `Data Visualisation` · `Business Intelligence`
+
+
+
+<div align="center">
+
+## Jaiz Collins
+
+### Data Analytics · Machine Learning · Pricing Intelligence
+
+**Turning marketplace data into actionable commercial decisions.**
+
+</div>
